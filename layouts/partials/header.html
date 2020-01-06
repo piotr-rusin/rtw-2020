@@ -1,12 +1,21 @@
 <header>
 	<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-	{{ with .Site.Menus.main }}
 	<nav>
 		<ul>
-			{{ range . }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+			{{ range .Site.Menus.left }}
+			<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
+			{{ end }}
+
+			{{ with .Site.Taxonomies.tags.ByCount }}
+				{{ range first 5 . }}
+				<li><a href="{{ .Page.Permalink }}">{{ .Page.Title | humanize }}</a></li>
+				{{ end }}
+			{{ end }}
+			<li><a href="{{ .Site.Params.taxonomyUrl | relURL }}">More &raquo;</a></li>
+
+			{{ range .Site.Menus.right }}
+			<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 			{{ end }}
 		</ul>
 	</nav>
-	{{ end }}
 </header>
