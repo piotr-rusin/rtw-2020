@@ -6,13 +6,6 @@
 			{{ with .Content }}<div>{{ . }}</div>{{ end }}
 		</div>
 		{{ end }}
-		{{/*<ul>
-			{{ range sort .Pages "Pages.Count"}}
-				<li>
-					<a href="{{ .Permalink }}">{{ .Title }} ({{ len .Pages }})</a>
-				</li>
-			{{ end }}
-		</ul>*/}}
 		<ul>
 			{{ range .Data.Terms.Alphabetical }}
 				<li>
