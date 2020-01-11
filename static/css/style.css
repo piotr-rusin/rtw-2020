@@ -1,0 +1,21 @@
+
+  @media (min-width: 500px) {
+
+    nav ul, footer ul {
+      display: flex;
+      padding: 0;
+    }
+
+    nav ul li, footer ul li {
+        display: block;
+        padding: 0.3em;
+      }
+
+    footer ul li + li:before {
+      content: " / ";
+    }
+
+    .menu-right {
+        margin-left: auto;
+    }
+  }

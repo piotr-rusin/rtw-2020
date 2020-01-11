@@ -15,7 +15,7 @@
 			<li><a href="{{ .Site.Params.taxonomyUrl | relURL }}">More &raquo;</a></li>
 
 			{{ range .Site.Menus.right }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
+			<li class="menu-right"><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 			{{ end }}
 		</ul>
 	</nav>
