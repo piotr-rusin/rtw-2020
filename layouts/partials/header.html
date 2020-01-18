@@ -14,6 +14,20 @@
 					<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 				{{ end }}
 			</ul>
+			<a href="#off-canvas-menu" uk-toggle>Off canvas</a>
 		</div>
 	</nav>
+	<div id="off-canvas-menu" uk-offcanvas="flip: true">
+		<div class="uk-offcanvas-bar">
+			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<ul class="uk-nav uk-nav-default">
+				{{ range .Site.Menus.left }}
+					<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
+				{{ end }}
+				{{ range .Site.Menus.right }}
+					<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
+				{{ end }}
+			</ul>
+		</div>
+	</div>	
 </header>
