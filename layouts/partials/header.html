@@ -1,22 +1,26 @@
 <header>
-	<nav>
-		<ul>
-			<li><a href="{{ .Site.BaseURL }}">{{ .Site.Params.homeLinkText | humanize }}</a></li>
-
-			{{ range .Site.Menus.left }}
-			<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
-			{{ end }}
-
-			{{ with .Site.Taxonomies.tags.ByCount }}
-				{{ range first 5 . }}
-				<li><a href="{{ .Page.Permalink }}">{{ .Page.Title | humanize }}</a></li>
+	<nav class="uk-navbar-container" uk-navbar>
+		<div class="uk-navbar-left">
+			<a href="{{ .Site.BaseURL }}" class="uk-navbar-item uk-logo">{{ .Site.Params.homeLinkText | humanize }}</a>
+			<ul class="uk-navbar-nav">	
+				{{ range .Site.Menus.left }}
+					<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 				{{ end }}
-			{{ end }}
-			<li><a href="{{ .Site.Params.taxonomyUrl | relURL }}">More &raquo;</a></li>
-
-			{{ range .Site.Menus.right }}
-			<li class="menu-right"><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
-			{{ end }}
-		</ul>
+	
+				{{ with .Site.Taxonomies.tags.ByCount }}
+					{{ range first 5 . }}
+						<li><a href="{{ .Page.Permalink }}">{{ .Page.Title | humanize }}</a></li>
+					{{ end }}
+				{{ end }}
+				<li><a href="{{ .Site.Taxonomies.tags.Permalink }}">More &raquo;</a></li>
+			</ul>
+		</div>
+    	<div class="uk-navbar-right">
+			<ul class="uk-navbar-nav">
+				{{ range .Site.Menus.right }}
+					<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
+				{{ end }}
+			</ul>
+		</div>
 	</nav>
 </header>
