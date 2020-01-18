@@ -6,13 +6,6 @@
 				{{ range .Site.Menus.left }}
 					<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 				{{ end }}
-	
-				{{ with .Site.Taxonomies.tags.ByCount }}
-					{{ range first 5 . }}
-						<li><a href="{{ .Page.Permalink }}">{{ .Page.Title | humanize }}</a></li>
-					{{ end }}
-				{{ end }}
-				<li><a href="{{ .Site.Taxonomies.tags.Permalink }}">More &raquo;</a></li>
 			</ul>
 		</div>
     	<div class="uk-navbar-right">
