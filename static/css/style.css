@@ -1,3 +1,15 @@
+.uk-navbar-item, .uk-navbar-item:visited, .uk-navbar-nav > li > a, .uk-navbar-nav > li > a:visited {
+  color: #fff;
+}
+
+.uk-navbar-item:hover, .uk-navbar-nav > li > a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.uk-navbar-item:active, .uk-navbar-nav > li > a:active {
+  color: red;
+}
 
   @media (min-width: 500px) {
 
