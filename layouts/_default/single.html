@@ -4,8 +4,10 @@
 {{ define "main" }}
 	<main>
 		<article>
-			<h1>{{ .Title }}</h1>
-			{{ partial "article_meta" .}}
+			<header>
+				<h1>{{ .Title }}</h1>
+				{{ partial "article_meta" .}}
+			</header>
 			<div>
 				{{ .Content }}
 			</div>

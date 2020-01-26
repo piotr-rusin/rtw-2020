@@ -1,6 +1,8 @@
 <article>
-	<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-	{{ partial "article_meta" .}}
+	<header>
+		<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+		{{ partial "article_meta" .}}
+	</header>
 	<div>
 		{{ .Summary }}
 		{{ if .Truncated }}
