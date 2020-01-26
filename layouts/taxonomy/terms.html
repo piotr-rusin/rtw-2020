@@ -1,11 +1,6 @@
 {{ define "main" }}
 	<main>
-		{{ if or .Title .Content }}
-		<div>
-			{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
-			{{ with .Content }}<div>{{ . }}</div>{{ end }}
-		</div>
-		{{ end }}
+		{{ with .Content }}<div>{{ . }}</div>{{ end }}
 		<ul class="uk-column-1-1@s uk-column-1-2@m uk-column-1-3@l">
 			{{ range .Data.Terms.Alphabetical }}
 				<li>
