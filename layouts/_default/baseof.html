@@ -16,7 +16,13 @@
 <body>
 	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.7/dist/js/uikit.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.7/dist/js/uikit-icons.min.js"></script>
-	<header>{{ partial "main_navigation" . }}</header>
+	<header>
+		{{ partial "main_navigation" . }}
+		<div class="uk-container uk-container-xsmall">
+			{{ block "page_header_content" . }}
+			{{ end }}
+		</div>
+	</header>
 	<div class="uk-container uk-container-xsmall">{{ block "main" . }}{{ end }}</div>
 	{{ partial "footer" . }}
 </body>
