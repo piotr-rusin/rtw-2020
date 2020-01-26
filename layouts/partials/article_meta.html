@@ -1,0 +1,6 @@
+<p class="uk-article-meta">
+    <time>{{ .Date.Format "Jan 02, 2006" }}</time> /
+    {{ range $index, $value := .Params.tags }}
+    {{ if gt $index 0}}, {{ end }}<a class="tag" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}">{{ $value | urlize }}</a>
+    {{- end -}}
+</p>
