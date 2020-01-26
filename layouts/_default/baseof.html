@@ -18,10 +18,17 @@
 	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.7/dist/js/uikit-icons.min.js"></script>
 	<header>
 		{{ partial "main_navigation" . }}
-		<div class="uk-container uk-container-xsmall">
-			{{ block "page_header_content" . }}
-			{{ end }}
-		</div>
+		{{ block "page_header_content" . }}
+		<h1 class="uk-container uk-container-xsmall">
+			<a href="{{ .Permalink }}">
+				{{ if .Title }}
+					{{ .Title }}
+				{{ else }}
+					{{ .Site.Title }}
+				{{ end }}
+			</a>
+		</h1>
+		{{ end }}
 	</header>
 	<div class="uk-container uk-container-xsmall">{{ block "main" . }}{{ end }}</div>
 	{{ partial "footer" . }}
