@@ -5,14 +5,14 @@
 				<a href="{{ .Site.BaseURL }}" class="uk-navbar-item">{{ .Site.Params.homeLinkText | humanize }}</a>
 				<ul class="uk-navbar-nav uk-visible@m">	
 					{{ range .Site.Menus.left.ByWeight }}
-						<li><a class="uk-text-capitalize" href="{{ .URL | relURL }}">{{ .Name | humanize }}</a class="uk-text-capitalize"></li>
+						<li><a class="uk-text-capitalize" href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 					{{ end }}
 				</ul>
 			</div>
 			<div class="uk-navbar-right">
 				<ul class="uk-navbar-nav uk-visible@m">
 					{{ range .Site.Menus.right.ByWeight }}
-						<li><a class="uk-text-capitalize" href="{{ .URL | relURL }}">{{ .Name | humanize }}</a class="uk-text-capitalize"></li>
+						<li><a class="uk-text-capitalize" href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 					{{ end }}
 				</ul>
 				<a href="#off-canvas-menu" class="uk-navbar-item uk-hidden@m" uk-toggle>Off canvas</a>
