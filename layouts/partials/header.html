@@ -1,7 +1,7 @@
 <header>
 	<nav class="uk-navbar-container" uk-navbar>
 		<div class="uk-navbar-left">
-			<a href="{{ .Site.BaseURL }}" class="uk-navbar-item uk-logo">{{ .Site.Params.homeLinkText | humanize }}</a>
+			<a href="{{ .Site.BaseURL }}" class="uk-navbar-item">{{ .Site.Params.homeLinkText | humanize }}</a>
 			<ul class="uk-navbar-nav uk-visible@m">	
 				{{ range .Site.Menus.left.ByWeight }}
 					<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
