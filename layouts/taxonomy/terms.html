@@ -1,3 +1,6 @@
+{{define "page_header_content" }}
+	{{ partial "page_header_content.html" . }}
+{{ end  }}
 {{ define "main" }}
 	<main>
 		{{ with .Content }}<div>{{ . }}</div>{{ end }}

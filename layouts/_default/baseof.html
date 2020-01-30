@@ -19,15 +19,6 @@
 	<header>
 		{{ partial "main_navigation" . }}
 		{{ block "page_header_content" . }}
-		<h1 class="uk-container uk-container-xsmall">
-			<a href="{{ .Permalink }}">
-				{{ if .Title }}
-					{{ .Title }}
-				{{ else }}
-					{{ .Site.Title }}
-				{{ end }}
-			</a>
-		</h1>
 		{{ end }}
 	</header>
 	<div class="uk-container uk-container-xsmall">{{ block "main" . }}{{ end }}</div>

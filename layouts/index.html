@@ -1,3 +1,6 @@
+{{define "page_header_content" }}
+	{{ partial "page_header_content.html" . }}
+{{ end  }}
 {{ define "main" }}
 	<main>
 		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}

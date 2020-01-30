@@ -1,0 +1,9 @@
+<h1 class="uk-container uk-container-xsmall">
+    <a href="{{ .Permalink }}" class="uk-link-heading">
+        {{ if .Title }}
+            {{ .Title }}
+        {{ else }}
+            {{ .Site.Title }}
+        {{ end }}
+    </a>
+</h1>
