@@ -11,6 +11,11 @@
   color: red;
 }
 
+.main-header > h1, .main-article-header {
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
   @media (min-width: 500px) {
 
     nav ul, footer ul {
