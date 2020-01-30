@@ -1,6 +1,7 @@
 <p class="uk-article-meta">
-    <time>{{ .Date.Format "Jan 02, 2006" }}</time> /
-    {{ range $index, $value := .Params.tags }}
+    <time>{{ .Date.Format "Jan 02, 2006" }}</time> {{ with .Params.tags }}/
+    {{ range $index, $value := . }}
     {{ if gt $index 0}}, {{ end }}<a class="tag" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}">{{ $value | urlize }}</a>
     {{- end -}}
+    {{ end }}
 </p>
