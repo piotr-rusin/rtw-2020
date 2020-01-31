@@ -20,6 +20,10 @@ h1 {
   margin-bottom: 70px;
 }
 
+.uk-navbar-item, .uk-navbar-nav > li > a, .uk-navbar-toggle {
+  min-height: 30px;
+}
+
 .pagination {
   margin-top: 70px;
   margin-bottom: 40px;
