@@ -22,6 +22,8 @@
 		{{ end }}
 	</header>
 	<div class="uk-container uk-container-xsmall">{{ block "main" . }}{{ end }}</div>
+	{{ block "latest_articles_compact" . }}
+	{{ end }}
 	{{ partial "main_navigation" . }}
 </body>
 </html>
