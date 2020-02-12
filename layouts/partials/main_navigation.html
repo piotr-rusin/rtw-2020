@@ -1,27 +1,27 @@
-<div class="uk-background-primary">
-	<nav class="uk-container uk-container-small" uk-navbar>
-		<div class="uk-navbar-left">
-			<a href="{{ .Site.BaseURL }}" class="uk-navbar-item">{{ .Site.Params.homeLinkText | humanize }}</a>
-			<ul class="uk-navbar-nav uk-visible@m">	
+<div>
+	<nav>
+		<div>
+			<a href="{{ .Site.BaseURL }}">{{ .Site.Params.homeLinkText | humanize }}</a>
+			<ul>	
 				{{ range .Site.Menus.left.ByWeight }}
 					<li><a class="uk-text-capitalize" href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 				{{ end }}
 			</ul>
 		</div>
-		<div class="uk-navbar-right">
-			<ul class="uk-navbar-nav uk-visible@m">
+		<div>
+			<ul>
 				{{ range .Site.Menus.right.ByWeight }}
-					<li><a class="uk-text-capitalize" href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
+					<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 				{{ end }}
 			</ul>
-			<a href="#off-canvas-menu" class="uk-navbar-item uk-hidden@m" uk-toggle>Off canvas</a>
+			<a href="#off-canvas-menu">Off canvas</a>
 		</div>
 	</nav>
 </div>
-<div id="off-canvas-menu" uk-offcanvas="flip: true">
-	<div class="uk-offcanvas-bar">
-		<button class="uk-offcanvas-close" type="button" uk-close></button>
-		<ul class="uk-nav uk-nav-default">
+<div>
+	<div>
+		<button type="button"></button>
+		<ul>
 			{{ range .Site.Menus.left }}
 				<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
 			{{ end }}

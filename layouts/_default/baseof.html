@@ -7,21 +7,18 @@
 	<title>{{ .Title }}</title>
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.7/dist/css/uikit.min.css" />
 	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 	{{ with .OutputFormats.Get "RSS" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
 </head>
 <body>
-	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.7/dist/js/uikit.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.7/dist/js/uikit-icons.min.js"></script>
-	<header class="main-header">
+	<header>
 		{{ partial "main_navigation" . }}
 		{{ block "page_header_content" . }}
 		{{ end }}
 	</header>
-	<div class="uk-container uk-container-xsmall">{{ block "main" . }}{{ end }}</div>
+	<div>{{ block "main" . }}{{ end }}</div>
 	{{ block "latest_articles_compact" . }}
 	{{ end }}
 	{{ partial "main_navigation" . }}

@@ -4,7 +4,7 @@
     {{ $num_recent_posts := (index .Site.Params.widgets "num_other_articles" | default 5) }}
     {{ range first $num_recent_posts (where .Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
       <li>
-        <a href="{{ .Permalink }}" class="uk-link-heading">{{ .Title }}</a> - <time>{{ .Date.Format "Jan 02, 2006" }}</time>
+        <a href="{{ .Permalink }}">{{ .Title }}</a> - <time>{{ .Date.Format "Jan 02, 2006" }}</time>
       </li>
     {{ end }}
     </ul>
