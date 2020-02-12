@@ -18,16 +18,3 @@
 		</div>
 	</nav>
 </div>
-<div>
-	<div>
-		<button type="button"></button>
-		<ul>
-			{{ range .Site.Menus.left }}
-				<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
-			{{ end }}
-			{{ range .Site.Menus.right }}
-				<li><a href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
-			{{ end }}
-		</ul>
-	</div>
-</div>
