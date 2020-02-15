@@ -3,10 +3,8 @@
 		<h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 		{{ partial "article_meta" .}}
 	</header>
-	<div>
-		{{ .Summary }}
-		{{ if .Truncated }}
-			<a href="{{ .Permalink }}">Read more...</a>
-		{{ end }}
-	</div>
+	{{ .Summary }}
+	{{ if .Truncated }}
+		<a href="{{ .Permalink }}">Read more...</a>
+	{{ end }}
 </article>

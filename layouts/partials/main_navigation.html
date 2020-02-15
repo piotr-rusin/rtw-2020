@@ -1,12 +1,8 @@
-<div>
-	<nav>
-		<div>
-			<a href="{{ .Site.BaseURL }}">{{ .Site.Params.homeLinkText | humanize }}</a>
-			<ul>	
-				{{ range .Site.Menus.main.ByWeight }}
-					<li><a class="uk-text-capitalize" href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
-				{{ end }}
-			</ul>
-		</div>
-	</nav>
-</div>
+<nav>
+	<a href="{{ .Site.BaseURL }}">{{ .Site.Params.homeLinkText | humanize }}</a>
+	<ul>
+		{{ range .Site.Menus.main.ByWeight }}
+		<li><a class="uk-text-capitalize" href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
+		{{ end }}
+	</ul>
+</nav>
