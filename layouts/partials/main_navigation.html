@@ -1,5 +1,7 @@
-<nav>
+<nav class="{{ cond .IsHome "home-nav" "nav"}}">
+	{{ if not .IsHome }}
 	<a href="{{ .Site.BaseURL }}">{{ .Site.Params.homeLinkText | humanize }}</a>
+	{{ end }}
 	<ul>
 		{{ range .Site.Menus.main.ByWeight }}
 		<li><a class="uk-text-capitalize" href="{{ .URL | relURL }}">{{ .Name | humanize }}</a></li>
