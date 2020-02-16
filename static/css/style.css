@@ -1,0 +1,21 @@
+  /* header and footer areas */
+nav ul, footer ul { padding: 0; }
+nav ul li, footer ul li { display: inline-block; }
+nav a, footer span, footer a {
+  text-decoration: none;
+  padding: 5px;
+}
+
+nav ul li + li:before, footer ul li + li:before {
+  content: " / ";
+}
+
+header, nav ul, footer { text-align: center; }
+
+@media screen and (min-width: 500px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
