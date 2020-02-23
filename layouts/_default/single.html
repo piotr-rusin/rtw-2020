@@ -3,7 +3,9 @@
 		<article>
 			<header>
 				<h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-				{{ partial "article_meta" .}}
+				{{if eq .Section "posts"}}
+					{{ partial "article_meta" .}}
+				{{ end }}
 			</header>
 			<div>
 				{{ .Content }}
